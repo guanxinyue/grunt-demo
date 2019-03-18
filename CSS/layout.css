@@ -1,0 +1,41 @@
+.border半径（@value）{
+    -webkit-border-radius：@value ;
+    -moz-border-radius：@value ;
+    border-radius：@value ;
+    background-clip：padding-box ;
+
+}
+
+.box-size（@color）{
+    宽度：300 像素 ;
+    身高：100 像素 ;
+    背景：@color ;
+    边框：1 px  solid ;
+    颜色：白色 ;
+
+}
+
+.slightly-rounded {
+    .box-size（绿色）;
+    .border-radius（5 px）;
+
+}
+
+.very-rounded {
+    .box-size（蓝色）;
+    .border-radius（16 px）;
+
+}
+
+@yellowish：#FFC ;
+
+一个 {
+    背景色：@yellowish ;
+
+}
+
+blockquote {
+    background-color：＃333 ;
+      颜色：@yellowish ;
+
+}
