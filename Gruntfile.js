@@ -1,18 +1,23 @@
 module.exports = function (grunt) {
+rts = function (grunt) {
   grunt.initConfig({
-    sprite: {
-      all: {
-          src: './images/*.png',
-          dest: './images/all.png',
-          destCss: 'dist/sprites.css'                                            
+    run: {
+      api: {
+        options: { wait: false },
+        args: ['./app.js']
       }
-          
+    },
+    mochacli: {
+      options: {
+        reporter: 'spec',
+        bail: true
+      },
+        all: ['test/*.js']
     }
-      
   });
 
-    grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-run')
+  grunt.loadNpmTasks('grunt-mocha-cli')
 
-    grunt.registerTask('default', ['sprite']);
-
+  grunt.registerTask('default', ['run', 'mochacli', 'stop:api']);
 };
