@@ -1,18 +1,14 @@
-module.exports = function (grunt) {
-  grunt.initConfig({
-    sprite: {
-      all: {
-          src: './images/*.png',
-          dest: './images/all.png',
-          destCss: 'dist/sprites.css'                                            
-      }
-          
+ module.exports = function(grunt) {
+   grunt.initConfig({
+    eslint: {
+      options: {
+        configFile: '.eslintrc.json'
+      },
+      target: ['rectangle.js']
     }
-      
   });
 
-    grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-eslint');
 
-    grunt.registerTask('default', ['sprite']);
-
+  grunt.registerTask('default', ['eslint']);
 };

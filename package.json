@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "grunt-eslint": "^21.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-eslint": "0.0.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +22,5 @@
   "bugs": {
     "url": "https://github.com/guanxinyue/grunt-demo/issues"
   },
-  "homepage": "https://github.com/guanxinyue/grunt-demo#readme",
-  "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-spritesmith": "^6.6.3"
-  }
+  "homepage": "https://github.com/guanxinyue/grunt-demo#readme"
 }
