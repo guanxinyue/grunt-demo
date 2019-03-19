@@ -1,18 +1,18 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    sprite: {
-      all: {
-          src: './images/*.png',
-          dest: './images/all.png',
-          destCss: 'dist/sprites.css'                                            
-      }
+    csslint: {
+      options: {
+                csslintrc: '.csslintrc'
           
+      },
+        src: ['rectangle.css']
+        
     }
-      
+               
   });
 
-    grunt.loadNpmTasks('grunt-spritesmith');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
 
-    grunt.registerTask('default', ['sprite']);
+      grunt.registerTask('default', ['csslint']);
 
 };
